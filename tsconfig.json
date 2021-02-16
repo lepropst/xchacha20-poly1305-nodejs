@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+		"lib": ["dom", "es2015"]
+    },
+    "include": [
+        "src/index.ts",
+        "src/keyStore.ts",
+        "src/util.ts"
+    ],
+    "exclude": [],
+    "baseUrl": "types",
+    "typeRoots": ["types"]
+}

@@ -1,0 +1,21 @@
+{
+    "modules": {
+        "util": "src/utilities.ts",
+        "keystore": {
+            "entry": "src/keyStore.ts",
+            "dependencies": ["util"]
+        },
+        "bundle":  {
+            "entry": "src/index.ts",
+            "dependencies": ["keystore"]   
+        }
+    },
+    "external": {
+        "libsodium-wrappers": "libsodiumWrappers",
+        "dotenv": "dotenv",
+        "fs": "fs",
+        "util": "util",
+        "crypto": "crypto"
+    },
+    "prefix": "dev/"
+}
