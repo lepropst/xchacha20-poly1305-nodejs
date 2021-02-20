@@ -56,7 +56,7 @@ class KeyStore implements KeyStoreInterface {
     
   }
 static test() {
-    console.log('testing keystore')
+  return 'testing keystore';
   }
  static async createKeyStore (filePath: string, sodium: any)  {
   const readFile: any = promisify(fs.readFile);
