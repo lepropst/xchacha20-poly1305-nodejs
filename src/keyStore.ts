@@ -44,6 +44,7 @@ class KeyStore implements KeyStoreInterface {
   iterations: number;
   save: any;
   sodium: any;
+  test: () => void;
 
   constructor(save: SaveKeys, initialKeys: KeysData = {},
     options: { iterations?: number} = {}, sodium: any) {
@@ -53,6 +54,8 @@ class KeyStore implements KeyStoreInterface {
     this.keysData = initialKeys;
     this.save = save;
     this.sodium = sodium;
+    this.test = () => console.log('testing keystore');
+    
   }
 
  static async createKeyStore (filePath: string, sodium: any)  {

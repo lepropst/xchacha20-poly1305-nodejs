@@ -1,6 +1,6 @@
-import { Base64Decode } from "../src/utilities";
+import { KeyStore } from "../src/keyStore";
 
 // function Base64Encode(data: Uint8Array): string {
-test('encodes base64', () => {
-  expect(Base64Decode("hello")).toBe("aGVsbG8=")
+test('testing the keyStore', () => {
+  expect(test()).toBe("testing keystore")
 })
