@@ -44,7 +44,6 @@ class KeyStore implements KeyStoreInterface {
   iterations: number;
   save: any;
   sodium: any;
-  test: () => void;
 
   constructor(save: SaveKeys, initialKeys: KeysData = {},
     options: { iterations?: number} = {}, sodium: any) {
@@ -53,11 +52,12 @@ class KeyStore implements KeyStoreInterface {
     } else { this.iterations = 10000 }
     this.keysData = initialKeys;
     this.save = save;
-    this.sodium = sodium;
-    this.test = () => console.log('testing keystore');
+    this.sodium = sodium
     
   }
-
+static test() {
+    console.log('testing keystore')
+  }
  static async createKeyStore (filePath: string, sodium: any)  {
   const readFile: any = promisify(fs.readFile);
   const writeFile: any = promisify(fs.writeFile);
