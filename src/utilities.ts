@@ -2,10 +2,8 @@
  * Package base64 implements Base64 encoding and decoding.
  */
 
-
 const INVALID_UTF16 = "utf8: invalid string";
 const INVALID_UTF8 = "utf8: invalid source encoding";
-
 
 // Invalid character used in decoding to indicate
 // that the character to decode is out of range of
@@ -21,7 +19,6 @@ class Coder {
   // TODO(dchest): methods to encode chunk-by-chunk.
 
   constructor(private _paddingCharacter = "=") {}
-
 
   public encode(data: Uint8Array): string {
     let out = "";
@@ -210,7 +207,7 @@ class Coder {
  * Throws if the source string has invalid UTF-16 encoding.
  */
 
- function encodedLength(s: string): number {
+function encodedLength(s: string): number {
   let result = 0;
   for (let i = 0; i < s.length; i++) {
     const c = s.charCodeAt(i);
@@ -372,14 +369,11 @@ function UTF8Decode(arr: Uint8Array): string {
   return chars.join("");
 }
 
-
 const stdCoder = new Coder();
 
-
-
 /**
- * 
- * Base 64 
+ *
+ * Base 64
  */
 function Base64Encode(data: Uint8Array): string {
   return stdCoder.encode(data);
@@ -391,9 +385,9 @@ function Base64Decode(s: string): Uint8Array {
 
 export {
   UTF8Encode,
-UTF8EncodedLength,
-UTF8Decode,
-Base64Encode,
-Base64Decode,
-Coder
+  UTF8EncodedLength,
+  UTF8Decode,
+  Base64Encode,
+  Base64Decode,
+  Coder,
 };

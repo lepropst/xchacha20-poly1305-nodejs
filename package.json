@@ -1,31 +1,57 @@
 {
-  "name": "xchacha20-poly1305aead-nodejs",
+  "name": "@lepropst/xchacha20poly1305",
   "version": "1.0.0",
-  "description": "xchacha20 implemention in node with pbkfd keystore",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tscc",
-    "publish": "npm publish --access public"
+  "description": "XChacha20 Poly 1305 authenticated encryption with additional data library including a password-based key derivation function.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
   },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "xchacha20",
+    "poly1305",
+    "aead",
+    "encryption",
+    "cryptography"
+  ],
   "author": "Elias Rangel",
-  "license": "ISC",
-  "browser": true,
-  "main": "dev/bundle.js",
-  "files": ["dev"],
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "libsodium": "^0.7.9",
-    "libsodium-wrappers": "^0.7.9"
+    "@noble/ciphers": "^2.0.1",
+    "libsodium": "^0.7.15",
+    "libsodium-wrappers": "^0.7.15"
   },
   "devDependencies": {
-    "@types/libsodium-wrappers": "^0.7.9",
-    "@types/node": "^14.14.28",
-    "eslint": "^7.19.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "google-closure-compiler": "^20210202.0.0",
-    "prettier": "^2.2.1",
-    "tslib": "^2.1.0",
-    "typescript": "^4.1.4"
+    "@types/jest": "^30.0.0",
+    "@types/libsodium-wrappers": "^0.7.14",
+    "@types/node": "^14.18.63",
+    "jest": "^30.2.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.4.5",
+    "typescript": "^4.9.5",
+    "vite": "^7.2.2",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
