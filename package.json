@@ -1,5 +1,5 @@
 {
-  "name": "@lepropst/xchacha20poly1305",
+  "name": "@lepropst/xchacha20-poly1305",
   "version": "1.0.0",
   "description": "XChacha20 Poly 1305 authenticated encryption with additional data library including a password-based key derivation function.",
   "type": "module",
