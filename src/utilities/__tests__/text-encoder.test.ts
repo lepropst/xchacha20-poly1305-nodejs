@@ -1,7 +1,6 @@
-import { randomBytes } from "@noble/ciphers/utils.js";
 import { testingString } from "./constants";
 import { TextUtil } from "../text-util";
-import { expect, it, test } from "vitest";
+import { expect, test } from "vitest";
 
 test("Encode and decode a string for encryption purposes.", () => {
   const encoded = TextUtil.getInstance().encodeToUint8Array(testingString);
