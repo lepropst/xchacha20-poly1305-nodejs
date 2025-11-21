@@ -1,5 +1,6 @@
 import _sodium from "libsodium-wrappers";
-import { UTF8Decode } from "@xchacha-poly-1305/utilities";
+import { TextDecoder } from "util";
+// import { UTF8Decode } from "@xchacha-poly-1305/utilities";
 
 export const decrypt = async (
   cipherText: string,
@@ -16,7 +17,7 @@ export const decrypt = async (
       metadata.nonce,
       secretKey
     );
-    return UTF8Decode(result);
+    return new TextDecoder().decode(result);
   } catch (e) {
     console.error(e);
     throw e;

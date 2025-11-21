@@ -1,14 +1,15 @@
 import _sodium from "libsodium-wrappers";
-import { generateNonce } from "@xchacha-poly-1305/utilities";
+import { TextEncoder } from "util";
+// import { generateNonce } from "@xchacha-poly-1305/utilities";
 
 export const encrypt = async (
   message: string,
   metadata: Record<string, string>,
   password: string,
   secretKey: Uint8Array
-): Promise<Buffer<ArrayBuffer> | false> => {
+): Promise<Uint8Array | false> => {
   try {
-    const nonce = await generateNonce();
+    const nonce = new TextEncoder().encode("cannonFodderString"); //await generateNonce();
     const AD = JSON.stringify(metadata);
 
     const ciphertext = Buffer.from(

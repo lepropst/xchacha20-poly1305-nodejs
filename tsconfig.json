@@ -1,5 +1,5 @@
 {
- "compilerOptions": {
+  "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
     "lib": ["ES2020"],
@@ -7,6 +7,7 @@
     "declarationMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
+    "baseUrl": ".",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -17,8 +18,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@utilities/*": ["src/utilities/*"],
+      "@keystore/*": ["src/keystore/*"],
+      "@encryption/*": ["src/encryption/*"]
+    }
   },
+
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/__tests__/**"]
 }
