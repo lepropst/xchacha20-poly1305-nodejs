@@ -4,13 +4,13 @@ A TypeScript library providing XChaCha20-Poly1305 authenticated encryption with 
 
 ## Features
 
-- ✅ **XChaCha20-Poly1305 AEAD encryption** - Industry-standard authenticated encryption
-- 🔐 **Automatic key generation** - Secure 256-bit key creation
-- 🎲 **Nonce collision prevention** - Built-in tracking to prevent nonce reuse
-- 🌐 **Universal compatibility** - Works in Node.js and browsers
-- 📦 **Zero configuration** - Sensible defaults, simple API
-- 🔒 **Type-safe** - Full TypeScript support
-- ⚡ **Lightweight** - Minimal dependencies
+- **XChaCha20-Poly1305 AEAD encryption** - Industry-standard authenticated encryption
+- **Automatic key generation** - Secure 256-bit key creation
+- **Nonce collision prevention** - Built-in tracking to prevent nonce reuse
+- **Universal compatibility** - Works in Node.js and browsers
+- **Zero configuration** - Sensible defaults, simple API
+- **Type-safe** - Full TypeScript support
+- **Lightweight** - Minimal dependencies
 
 ## Installation
 
