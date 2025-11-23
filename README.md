@@ -59,4 +59,4 @@ Built on [@noble/ciphers](https://github.com/paulmillr/noble-ciphers) - audited,
 
 ---
 
-**Security Notice**: This library is part of a systems architure project. Appropriate use including rotation of keys, assurance of random nonces, and secure storage are dependent upon the user. This library purely provides the tools necessary to use the AEAD given the appropriate input.
+**Security Notice**: This library is part of a systems architecture project. Appropriate use including rotation of keys, assurance of random nonces, and secure storage are dependent upon the user. This library purely provides the tools necessary to use the AEAD given the appropriate input.

@@ -28,8 +28,3 @@ export class TextUtil {
     return this.decoderInstance.decode(data);
   }
 }
-
-const str = "sending something";
-console.log(str);
-const encoded = TextUtil.getInstance().encodeToUint8Array(str);
-console.log(str, encoded, TextUtil.getInstance().decodeFromUint8Array(encoded));
