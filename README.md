@@ -7,7 +7,6 @@ A TypeScript library providing XChaCha20-Poly1305 authenticated encryption with 
 - **XChaCha20-Poly1305 AEAD encryption** - Industry-standard authenticated encryption
 - **Automatic key generation** - Secure 256-bit key creation
 - **Nonce collision prevention** - Built-in tracking to prevent nonce reuse
-- **Universal compatibility** - Works in Node.js and browsers
 - **Zero configuration** - Sensible defaults, simple API
 - **Type-safe** - Full TypeScript support
 - **Lightweight** - Minimal dependencies
@@ -29,6 +28,8 @@ const key = generateKey();
 // Generate a nonce once and store it securely
 const nonce = generateKey();
 
+// Generate a password based key using the pbkdf file exports.
+const key = passwordBasedKeyDerivation(user, password);
 // Encrypt a message
 const ciphertext = encrypt(key, nonce, "Hello, World!");
 
