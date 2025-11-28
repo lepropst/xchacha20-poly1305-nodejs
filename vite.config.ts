@@ -12,11 +12,12 @@ export default defineConfig({
       fileName: (format) => `index.${format === "es" ? "js" : "cjs"}`,
     },
     rollupOptions: {
-      external: ["@noble/ciphers"],
+      external: ["@noble/ciphers", "@noble/hashes"],
       output: {
-        globals: {
-          "@noble/ciphers": "NobleCiphers",
-        },
+        // globals: {
+        //   "@noble/hashes":
+        //   "@noble/ciphers": "NobleCiphers",
+        // },
       },
     },
     sourcemap: true,

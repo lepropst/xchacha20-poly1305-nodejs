@@ -44,9 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "@noble/ciphers": "^2.0.1",
-    "@noble/hashes": "^2.0.1",
-    "libsodium": "^0.7.15",
-    "libsodium-wrappers": "^0.7.15"
+    "@noble/hashes": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",

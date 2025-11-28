@@ -1,0 +1,17 @@
+{
+  "name": "basic-text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basic-text-1.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.21.0",
+  "dependencies": {
+    "@lepropst/xchacha20-poly1305": "^1.0.0"
+  }
+}

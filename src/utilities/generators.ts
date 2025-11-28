@@ -4,6 +4,6 @@ export const generateKey = () => {
   return randomBytes(32);
 };
 
-export const generateNonce = async () => {
+export const generateNonce = () => {
   return randomBytes(24);
 };
