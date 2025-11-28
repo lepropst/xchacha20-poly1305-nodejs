@@ -1,5 +1,3 @@
-import { TextDecoder, TextEncoder } from "util";
-
 export class TextUtil {
   private static instance: TextUtil | null = null;
   private decoderInstance: TextDecoder;

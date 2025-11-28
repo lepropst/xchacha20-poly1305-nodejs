@@ -12,18 +12,23 @@ export default defineConfig({
       fileName: (format) => `index.${format === "es" ? "js" : "cjs"}`,
     },
     rollupOptions: {
-      // Externalize dependencies to avoid bundling them
       external: ["@noble/ciphers"],
       output: {
-        // Provide globals for UMD build (if you add 'umd' format later)
         globals: {
           "@noble/ciphers": "NobleCiphers",
         },
       },
     },
     sourcemap: true,
-    // Let consumers handle minification
     minify: false,
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+      "@utilities": resolve(__dirname, "./src/utilities"),
+      "@keystore": resolve(__dirname, "./src/keystore"),
+      "@encryption": resolve(__dirname, "./src/encryption"),
+    },
   },
   plugins: [
     dts({
